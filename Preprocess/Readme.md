@@ -3,8 +3,8 @@
 After getting jsonfile of captions and bounding boxes from Densecap
 
 ## extract_feature_making_npz.py
-Extract the visual feature and caption feature by pre-trained ResNet and BERT \\
-And save them to npz file
+Extract the visual feature and caption feature by pre-trained ResNet and BERT  And save them to npz file
+
 
 ## construct_graph_savepickle.py
 Load npz file to get coordinates from bounding boxes of regions
