@@ -1,1 +1,3 @@
-R
+# Preprocess  
+After getting jsonfile of captions and bounding boxes from Densecap,
+
