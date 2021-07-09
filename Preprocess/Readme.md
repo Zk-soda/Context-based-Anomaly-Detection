@@ -8,8 +8,8 @@ Extract the visual feature and caption feature by pre-trained ResNet and BERT
 
 
 ## construct_graph_savepickle.py
-Load npz file to get coordinates from bounding boxes of regions
-Compute their spatially overlapped relations and construct graphs
+Load npz file to get coordinates from bounding boxes of regions  
+Compute their spatially overlapped relations and construct graphs  
 Save each graph with features to picklefile for each image
 
 ## data_normalize_gin.py
