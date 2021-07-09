@@ -1,11 +1,11 @@
 # Preprocess 
+## pipeline
 
-After getting jsonfile of captions and bounding boxes from Densecap
+Raw Image --> jsonfile of captions and bounding boxes by Densecap --> npzfile of extracting visual and caption features by ResNet and BERT --> picklefile of constructed graphs for images including regions as nodes and node attributes as region features --> data normalization
 
 ## extract_feature_making_npz.py
-Extract the visual feature and caption feature by pre-trained ResNet and BERT  
-  And save them to npz file
-
+Extract the visual features of regions and caption features by pre-trained ResNet and BERT  
+And save them to npz file
 
 ## construct_graph_savepickle.py
 Load npz file to get coordinates from bounding boxes of regions  
