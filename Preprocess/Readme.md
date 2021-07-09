@@ -12,7 +12,7 @@ Load npz file to get coordinates from bounding boxes of regions
 Compute their spatially overlapped relations and construct graphs  
 Save each graph with features to picklefile for each image
 
-## data_normalize_gin.py
+## data_normalize.py
 Normalize all the data for CADAE
 
 
