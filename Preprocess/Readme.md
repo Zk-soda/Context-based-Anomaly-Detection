@@ -2,9 +2,9 @@
 ## pipeline
 
 Raw Image --> jsonfile of captions and bounding boxes by Densecap --> npzfile of extracting visual and caption features by ResNet and BERT --> picklefile of constructed graphs for images including regions as nodes and node attributes as region features --> data normalization  
-**pretrained models** can be found in:  
-[Densecap](https://github.com/jcjohnson/densecap)
-[ResNet](https://pytorch.org/vision/stable/models.html)
+**pretrained models** can be found from:  
+[Densecap](https://github.com/jcjohnson/densecap)  
+[ResNet](https://pytorch.org/vision/stable/models.html)  
 [BERT](https://github.com/hanxiao/bert-as-service)
 ## extract_feature_making_npz.py
 Extract the visual features of regions and caption features by pre-trained ResNet and BERT  
