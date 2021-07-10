@@ -75,7 +75,6 @@ def loadjson_kang_data(path):
         captions[sub_path] = []
         json_dir = 'selected_'+sub_path+'_json(rename)'
         for j in name:
-            #print(j)     
             jsonfile = json.load(open(os.path.join(path, json_dir, j.replace('jpg', 'json'))))
             results = jsonfile['results'][0]
             for name_copy in range(num_sample):
@@ -84,18 +83,15 @@ def loadjson_kang_data(path):
             captions[sub_path].extend(results['captions'][:num_sample])
             
             if 'labels' in results.keys():
-                print('abnormal {} with labels.'.format(j))
                 assert len(results['labels']) == 10
                 total_lab[sub_path] = np.append(total_lab[sub_path], results['labels'])
             else:
                 normal_lab = np.zeros(num_sample,dtype = int)
                 total_lab[sub_path] = np.append(total_lab[sub_path], normal_lab)
-        print(sub_path)
     return data_name, boxes, captions, total_lab
 
 def load_rename_json_hatae_data(path, img_dir, save_folder, data_type='te', save_img_json=True):
     #move jsonfile to train and text, load name, boundingbox, caption ,label from jsonfile
-    print('img_dir:',img_dir,'\n','save_folder:',save_folder,sep='')
     jsonfile = json.load(open(path))
     data_name = np.array(list(jsonfile['img_name'].values()))
     boxes = np.array(list(jsonfile['boxes'].values()))
